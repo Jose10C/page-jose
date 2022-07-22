@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear un formulario con campos ocultos</title>
+</head>
+
+<body>
+    <style>
+        form {
+            display: block;
+            width: 50%;
+            margin: 0 auto
+        }
+
+        input {
+            margin: 8px 0;
+            display: inline-block
+        }
+
+        .checklabel {
+            width: 8em;
+            display: inline-block
+        }
+
+        body {
+            background-color: rgb(167, 187, 34);
+        }
+    </style>
+    <form action="resultado.html" method="post">
+        <label>Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="nombre" required>
+        <br>
+        <label>Email</label>
+        <input type="email" id="email" name="email" placeholder="mail">
+        <br>
+        <label>Teléfono</label>
+        <input type="phone" id="telefono" name="telefono" placeholder="Su teléfono">
+        <br>
+        <br>
+        <fieldset id="lenguajes" name="lenguajes">
+            <legend>Lenguajes que conoce</legend>
+            <label class="checklabel">Javascript</label>
+            <input type="checkbox" id="javascript" name="javascript" value="si" checked>
+            <br>
+            <label class="checklabel">PHP</label>
+            <input type="checkbox" id="php" name="php" value="si">
+
+            <br>
+            <label class="checklabel">NodeJS</label>
+            <input type="checkbox" id="nodeJS" name="nodeJS" value="si">
+
+            <br>
+            <label class="checklabel">Python</label>
+            <input type="checkbox" id="python" name="python" value="si">
+        </fieldset>
+        <br>
+        <p>Nivel de Inglés</p>
+        <label class="checklabel">Bajo</label>
+        <input type="radio" id="nbajo" name="nivel-ingles" value="bajo" checked><br>
+
+        <label class="checklabel">Medio</label>
+        <input type="radio" id="nmedio" name="nivel-ingles" value="medio"><br>
+
+        <label class="checklabel">Alto</label>
+        <input type="radio" id="nalto" name="nivel-ingles" value="alto"><br>
+
+
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
